@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Hallym</title>
+</head>
+<body>
+    <h1>데이터 베이스 목록</h1>
+    <div>
+        {% for i in data %}
+            <p>학번: {{i.student_code}}</p>
+            <p>날짜: {{i.timestamp}}</p>
+            <p>위치: {{i.location}}</p>
+            <p>---------------</p>
+        {% endfor %}
+    </div>
+</body>
+</html>
