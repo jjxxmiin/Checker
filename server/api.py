@@ -1,5 +1,5 @@
 import os
-from flask import render_template
+from flask import render_template, url_for
 from flask_restful import reqparse
 from flask_restful import Api
 from app import app, db, DB_PATH
@@ -16,6 +16,13 @@ def read():
     data = User.query.all()
 
     return render_template('read.html', data=data)
+
+
+@app.route('/map')
+def map():
+    data = User.query.all()
+
+    return render_template('map.html', data=data)
 
 
 @app.route('/info', methods=['GET'])
@@ -35,7 +42,6 @@ def Info():
     db.session.commit()
 
     return {'ok': 1}
-
 
 if __name__ == "__main__":
     if not os.path.exists(DB_PATH):

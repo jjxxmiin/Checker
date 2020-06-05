@@ -1,0 +1,10 @@
+table, th {
+    border: 1px double black;
+}
+
+img {
+    width: auto;
+    height: auto;
+    display: block; 
+    margin: 0px auto;
+}

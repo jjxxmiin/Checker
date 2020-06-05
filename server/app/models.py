@@ -4,7 +4,8 @@ from app import db
 class User(db.Model):
     __table_name__ = 'user'
 
-    student_code = db.Column(db.String(100), unique=True, nullable=False, primary_key=True)
+    id = db.Column(db.Integer, primary_key=True, autoincrement=True)
+    student_code = db.Column(db.String(100), nullable=False)
     timestamp = db.Column(db.Float, nullable=False)
     location = db.Column(db.Integer, nullable=False)
 
